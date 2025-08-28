@@ -1,74 +1,91 @@
 "use client";
 import { useState } from "react";
 
-export default function TheNewMusicCo() {
+export default function NMCGradientPreview() {
   const [show, setShow] = useState(false);
 
   return (
-    <div className="relative min-h-screen font-mono text-black">
-      {/* Soft gradient background (OpenAI-ish) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-pink-200 via-purple-200 to-blue-200" />
+    <main className="relative min-h-screen text-black font-mono">
+      {/* Soft OpenAI-like gradient background */}
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(100%_80%_at_10%_10%,#fde1ea_0%,transparent_50%),radial-gradient(80%_70%_at_90%_0%,#dbeafe_0%,transparent_50%),radial-gradient(70%_70%_at_100%_100%,#e9d5ff_0%,transparent_50%),radial-gradient(80%_80%_at_0%_100%,#fee2e2_0%,transparent_50%)]" />
 
-      {/* Content */}
-      <main className="relative z-10 flex min-h-screen items-center justify-center p-6">
-        <div className="w-full max-w-xl text-center">
+      {/* Centered content card */}
+      <div className="mx-auto max-w-2xl px-6 py-16">
+        <div className="rounded-2xl bg-white/85 backdrop-blur-sm p-8 shadow-[0_0_1px_rgba(0,0,0,0.06)]">
           {/* Logo */}
-          <div className="mb-6 flex items-center justify-center gap-2">
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-label="NMC logo"
-            >
-              <rect x="1" y="1" width="26" height="26" rx="6" stroke="#000" strokeWidth="2" />
-              <path d="M8 9v10M14 9v10M20 9v10" stroke="#000" strokeWidth="2" strokeLinecap="round" />
+          <div className="mb-8 flex items-center gap-2">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-label="NMC logo">
+              <rect x="3" y="3" width="18" height="18" rx="3" stroke="#000" strokeWidth="2" />
+              <path d="M7 9h10M7 12h10M7 15h6" stroke="#000" strokeWidth="2" strokeLinecap="round" />
             </svg>
-            <span className="text-sm">NMC</span>
+            <span className="text-sm tracking-wide">NMC</span>
           </div>
 
-          {/* Headline */}
-          <h1 className="mb-3 text-base">Hi! We&apos;re the New Music Co.</h1>
+          {/* Intro */}
+          <section className="space-y-5 text-[15px] leading-7">
+            <p className="font-semibold">Hi! We're the New Music Co.</p>
 
-          {/* One-liner */}
-          <p className="mb-8 text-base leading-relaxed">
-            We&apos;re building something exciting at the intersection of{" "}
-            <strong>music</strong> and <strong>technology</strong>.
-          </p>
+            <p>
+              We’re a collective of music execs and founders helping labels, managers, agents,
+              distributors, publishers, radio—or anyone in the music industry—turn their next idea into reality.
+            </p>
+            <p>
+              AI lets us ship faster than ever. But knowing what to make—taste, selection, synthesis—matters more.
+              We build the big and the “boring” as much as the small and useful.
+            </p>
+            <p>
+              We help shape your ideas and bring them to life in weeks instead of months. Work with us per project or as an extension of your team, like your own Labs.
+            </p>
+            <p>
+              Sometimes we build things for ourselves—to show, not tell—and along the way, we might find the right partner to take it further.
+              That could be a co-founder, an operator, or a music company ready to run with a working idea.
+            </p>
+          </section>
 
           {/* CTA */}
-          <button
-            onClick={() => setShow((v) => !v)}
-            className="mx-auto inline-block rounded-md bg-black px-4 py-2 text-white hover:opacity-90"
-            aria-expanded={show}
-          >
-            Show Our Mission
-          </button>
+          <div className="mt-6">
+            <button
+              onClick={() => setShow((v) => !v)}
+              className="rounded-md bg-gray-200 px-3 py-2 text-sm"
+            >
+              Press Play
+            </button>
+          </div>
 
-          {/* Mission card */}
+          {/* Reveal section */}
           {show && (
-            <div className="mx-auto mt-6 max-w-lg rounded-xl bg-white/80 p-5 text-left backdrop-blur">
-              <h2 className="mb-3 font-semibold">Mission</h2>
-              <div className="space-y-3 text-sm leading-relaxed">
-                <p>
-                  We’re a group of music founders and execs helping labels, distributors,
-                  publishers, managers—anyone in music—turn ideas into reality. We’ve built
-                  startups, failed some, sold others—we know the game.
-                </p>
-                <p>
-                  AI is opening new doors for the music industry. We’ll help you step through them.
-                </p>
-                <p>
-                  Together with our partner engineers and studios, we shape, launch, and ship
-                  products—fast.
-                </p>
-                <p>Got an idea or just curious? Reach out.</p>
-              </div>
-            </div>
+            <section className="mt-8 space-y-4 text-[15px] leading-7">
+              <h2 className="font-semibold">How we work</h2>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>MVP in weeks, not months. Fast prototypes you can test right away.</li>
+                <li>Labs for hire. Work with us per project or as an extension of your team.</li>
+                <li>Vibe-arm for big companies. Explore without the corporate drag.</li>
+                <li>Build + spin-out. Sometimes we make things and find the right partner to run with it.</li>
+              </ul>
+            </section>
           )}
+
+          {/* Contact */}
+          <footer className="mt-10 text-[15px]">
+            <p className="mb-2">
+              Feel free to reach out at{" "}
+              <a href="mailto:hi@newmusic.co" className="underline" style={{ color: "#1D4ED8" }}>
+                hi@newmusic.co
+              </a>{" "}
+              or follow along at{" "}
+              <a
+                href="https://x.com/newmusicco"
+                target="_blank"
+                rel="noreferrer"
+                className="underline"
+                style={{ color: "#1D4ED8" }}
+              >
+                x.com/newmusicco
+              </a>.
+            </p>
+          </footer>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
