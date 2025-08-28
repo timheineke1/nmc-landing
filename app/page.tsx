@@ -1,17 +1,16 @@
 "use client";
-
 import { useState } from "react";
 
 export default function NMCGradientPreview() {
   const [show, setShow] = useState(false);
 
   return (
-    <main className="relative min-h-screen text-black font-mono">
+    <main className="nmc-root relative min-h-screen text-black">
       {/* Soft OpenAI-like gradient background */}
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(100%_80%_at_10%_10%,#fde1ea_0%,transparent_50%),radial-gradient(80%_70%_at_90%_0%,#dbeafe_0%,transparent_50%),radial-gradient(70%_70%_at_100%_100%,#e9d5ff_0%,transparent_50%),radial-gradient(80%_80%_at_0%_100%,#fee2e2_0%,transparent_50%)]" />
 
       {/* Centered content card */}
-      <div className="mx-auto max-w-2xl px-6 py-16">
+      <div className="mx-auto max-w-3xl px-6 py-16">
         <div className="rounded-2xl bg-white/85 backdrop-blur-sm p-8 shadow-[0_0_1px_rgba(0,0,0,0.06)]">
           {/* Logo */}
           <div className="mb-8 flex items-center gap-2">
@@ -23,7 +22,7 @@ export default function NMCGradientPreview() {
           </div>
 
           {/* Intro */}
-          <section className="space-y-5 text-[16px] leading-7">
+          <section className="space-y-5 text-[17px] leading-8">
             <p className="font-semibold">Hi! We're the New Music Co.</p>
 
             <p>
@@ -35,16 +34,18 @@ export default function NMCGradientPreview() {
               We build the big and the “boring” as much as the small and useful.
             </p>
             <p>
-              We help shape your ideas and bring them to life in weeks instead of months. Work with us per project or as an extension of your team, like your own Labs.
+              We help shape your ideas and bring them to life in weeks instead of months.
+              Work with us per project or as an extension of your team, like your own Labs.
             </p>
             <p>
-              Sometimes we build things for ourselves—to show, not tell—and along the way, we might find the right partner to take it further.
-              That could be a co-founder, an operator, or a music company ready to run with a working idea.
+              Sometimes we build things for ourselves—to show, not tell—and along the way,
+              we might find the right partner to take it further. That could be a co-founder,
+              an operator, or a music company ready to run with a working idea.
             </p>
           </section>
 
           {/* CTA */}
-          <div className="mt-6 mb-6">
+          <div className="mt-6">
             <button
               onClick={() => setShow((v) => !v)}
               className="rounded-md bg-gray-200 px-3 py-2 text-sm"
@@ -55,7 +56,7 @@ export default function NMCGradientPreview() {
 
           {/* Reveal section */}
           {show && (
-            <section className="mt-8 space-y-4 text-[16px] leading-7">
+            <section className="mt-8 space-y-4 text-[17px] leading-8">
               <h2 className="font-semibold">How we work</h2>
               <ul className="list-disc pl-5 space-y-2">
                 <li>MVP in weeks, not months. Fast prototypes you can test right away.</li>
@@ -67,7 +68,7 @@ export default function NMCGradientPreview() {
           )}
 
           {/* Contact */}
-          <footer className="mt-10 text-[16px]">
+          <footer className="mt-10 text-[17px] leading-8">
             <p className="mb-2">
               Feel free to reach out at{" "}
               <a href="mailto:hi@newmusic.co" className="underline" style={{ color: "#1D4ED8" }}>
