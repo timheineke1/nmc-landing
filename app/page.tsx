@@ -3,36 +3,34 @@
 import { useState } from "react";
 
 export default function NMCGradientPage() {
-  const [show, setShow] = useState(false);
+  const [show] = useState(false);
 
   return (
     <main className="relative min-h-screen font-mono text-[15px] leading-7">
-      {/* Gradient background */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-pink-100 via-white to-blue-100" />
+      {/* Soft OpenAI-like gradient background */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-pink-100 via-white to-blue-100" />
 
-      {/* Centered card */}
-      <div className="mx-auto max-w-xl p-6">
-        <div className="rounded-2xl bg-white/85 p-8 shadow-sm ring-1 ring-black/5 backdrop-blur">
-          {/* Logo */}
-          <div className="mb-6 flex items-center gap-2 text-sm font-medium">
+      {/* Centered content card */}
+      <div className="mx-auto max-w-xl px-6 py-16">
+        <div className="rounded-2xl bg-white/85 p-8 shadow-md backdrop-blur">
+          {/* Tiny logo row */}
+          <div className="mb-8 flex items-center gap-2">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
               className="h-5 w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M7 8h10M7 12h10M7 16h10" />
             </svg>
-            <span>NMC</span>
+            <span className="text-sm font-medium">NMC</span>
           </div>
 
-          {/* Content */}
+          {/* Text */}
           <h1 className="mb-4 text-lg font-bold">Hi! We're the New Music Co.</h1>
           <p className="mb-4">
             We’re a collective of music execs and founders helping labels,
@@ -49,7 +47,7 @@ export default function NMCGradientPage() {
             months. Work with us per project or as an extension of your team,
             like your own Labs.
           </p>
-          <p className="mb-6">
+          <p className="mb-8">
             Sometimes we build things for ourselves—to show, not tell—and along
             the way, we might find the right partner to take it further. That
             could be a co-founder, an operator, or a music company ready to run
@@ -57,17 +55,16 @@ export default function NMCGradientPage() {
           </p>
 
           {/* Button */}
-          <button className="rounded-md bg-gray-200 px-3 py-1 text-sm shadow-sm hover:bg-gray-300">
+          <button className="rounded-md bg-gray-200 px-4 py-2 text-sm font-medium hover:bg-gray-300">
             Press Play
           </button>
 
           {/* Footer */}
-          <footer className="mt-8 text-sm leading-6">
-            <p>
-              Feel free to reach out at{" "}
+          <footer className="mt-10 text-base leading-7">
+            <p className="mb-2">Feel free to reach out at{" "}
               <a
                 href="mailto:hi@newmusic.co"
-                className="text-blue-600 underline"
+                className="underline hover:text-blue-600"
               >
                 hi@newmusic.co
               </a>{" "}
@@ -76,11 +73,10 @@ export default function NMCGradientPage() {
                 href="https://x.com/newmusicco"
                 target="_blank"
                 rel="noreferrer"
-                className="text-blue-600 underline"
+                className="underline hover:text-blue-600"
               >
                 x.com/newmusicco
-              </a>
-              .
+              </a>.
             </p>
           </footer>
         </div>
