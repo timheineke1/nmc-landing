@@ -27,4 +27,11 @@ body {
 html { 
   -webkit-text-size-adjust: 100%; 
   text-size-adjust: 100%; 
+}/* Force NMC landing page to always use mono font */
+.nmc-root {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 16px;
+  line-height: 1.75; /* same as leading-7 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
