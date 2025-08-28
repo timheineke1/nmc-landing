@@ -10,7 +10,7 @@ export default function NMCGradientPreview() {
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(100%_80%_at_10%_10%,#fde1ea_0%,transparent_50%),radial-gradient(80%_70%_at_90%_0%,#dbeafe_0%,transparent_50%),radial-gradient(70%_70%_at_100%_100%,#e9d5ff_0%,transparent_50%),radial-gradient(80%_80%_at_0%_100%,#fee2e2_0%,transparent_50%)]" />
 
       {/* Centered content card */}
-      <div className="mx-auto max-w-3xl px-6 py-16">
+      <div className="mx-auto max-w-2xl px-6 py-16">
         <div className="rounded-2xl bg-white/85 backdrop-blur-sm p-8 shadow-[0_0_1px_rgba(0,0,0,0.06)]">
           {/* Logo */}
           <div className="mb-8 flex items-center gap-2">
@@ -34,13 +34,11 @@ export default function NMCGradientPreview() {
               We build the big and the “boring” as much as the small and useful.
             </p>
             <p>
-              We help shape your ideas and bring them to life in weeks instead of months.
-              Work with us per project or as an extension of your team, like your own Labs.
+              We help shape your ideas and bring them to life in weeks instead of months. Work with us per project or as an extension of your team, like your own Labs.
             </p>
             <p>
-              Sometimes we build things for ourselves—to show, not tell—and along the way,
-              we might find the right partner to take it further. That could be a co-founder,
-              an operator, or a music company ready to run with a working idea.
+              Sometimes we build things for ourselves—to show, not tell—and along the way, we might find the right partner to take it further.
+              That could be a co-founder, an operator, or a music company ready to run with a working idea.
             </p>
           </section>
 
@@ -56,34 +54,33 @@ export default function NMCGradientPreview() {
 
           {/* Reveal section */}
           {show && (
-            <section className="mt-8 space-y-4 text-[17px] leading-8">
-              <h2 className="font-semibold">How we work</h2>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>MVP in weeks, not months. Fast prototypes you can test right away.</li>
-                <li>Labs for hire. Work with us per project or as an extension of your team.</li>
-                <li>Vibe-arm for big companies. Explore without the corporate drag.</li>
-                <li>Build + spin-out. Sometimes we make things and find the right partner to run with it.</li>
-              </ul>
+            <section className="mt-8 space-y-6 text-[17px] leading-8">
+              <div>
+                <h2 className="font-semibold">MVP in weeks, not months.</h2>
+                <p>Fast prototypes you can test right away.</p>
+              </div>
+              <div>
+                <h2 className="font-semibold">Labs for hire.</h2>
+                <p>Work with us per project or as an extension of your team.</p>
+              </div>
+              <div>
+                <h2 className="font-semibold">Vibe-arm for big companies.</h2>
+                <p>Explore new ideas without the corporate drag.</p>
+              </div>
+              <div>
+                <h2 className="font-semibold">Build + spin-out.</h2>
+                <p>Sometimes we make things and find the right partner to run with it.</p>
+              </div>
             </section>
           )}
 
           {/* Contact */}
           <footer className="mt-10 text-[17px] leading-8">
             <p className="mb-2">
-              Feel free to reach out at{" "}
-              <a href="mailto:hi@newmusic.co" className="underline" style={{ color: "#1D4ED8" }}>
-                hi@newmusic.co
-              </a>{" "}
-              or follow along at{" "}
-              <a
-                href="https://x.com/newmusicco"
-                target="_blank"
-                rel="noreferrer"
-                className="underline"
-                style={{ color: "#1D4ED8" }}
-              >
-                x.com/newmusicco
-              </a>.
+              Feel free to reach out at{' '}
+              <a href="mailto:hi@newmusic.co" className="underline" style={{ color: '#1D4ED8' }}>hi@newmusic.co</a>{' '}
+              or follow along at{' '}
+              <a href="https://x.com/newmusicco" target="_blank" rel="noreferrer" className="underline" style={{ color: '#1D4ED8' }}>x.com/newmusicco</a>.
             </p>
           </footer>
         </div>
