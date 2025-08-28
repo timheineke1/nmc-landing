@@ -22,8 +22,8 @@ export default function NMCGradientPreview() {
           </div>
 
           {/* Intro */}
-          <section className="space-y-5 text-[15px] leading-7">
-            <p className="font-semibold">Hi! We're the New Music Co.</p>
+          <section className="space-y-5 text-base leading-7 md:text-[17px]">
+            <p className="font-semibold">Hi! We&apos;re the New Music Co.</p>
 
             <p>
               We’re a collective of music execs and founders helping labels, managers, agents,
@@ -54,7 +54,7 @@ export default function NMCGradientPreview() {
 
           {/* Reveal section */}
           {show && (
-            <section className="mt-8 space-y-4 text-[15px] leading-7">
+            <section className="mt-8 space-y-4 text-base leading-7 md:text-[17px]">
               <h2 className="font-semibold">How we work</h2>
               <ul className="list-disc pl-5 space-y-2">
                 <li>MVP in weeks, not months. Fast prototypes you can test right away.</li>
@@ -66,7 +66,7 @@ export default function NMCGradientPreview() {
           )}
 
           {/* Contact */}
-          <footer className="mt-10 text-[15px]">
+          <footer className="mt-10 text-base leading-7 md:text-[17px]">
             <p className="mb-2">
               Feel free to reach out at{" "}
               <a href="mailto:hi@newmusic.co" className="underline" style={{ color: "#1D4ED8" }}>
@@ -81,7 +81,8 @@ export default function NMCGradientPreview() {
                 style={{ color: "#1D4ED8" }}
               >
                 x.com/newmusicco
-              </a>.
+              </a>
+              .
             </p>
           </footer>
         </div>
