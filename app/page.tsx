@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 
 export default function NMCGradientPage() {
@@ -6,74 +7,68 @@ export default function NMCGradientPage() {
 
   return (
     <main className="relative min-h-screen font-mono text-[15px] leading-7">
-      {/* Soft OpenAI-like gradient background */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-pink-100 via-white to-blue-100" />
+      {/* Gradient background */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-pink-100 via-white to-blue-100" />
 
-      {/* Centered content card (width matches Canvas) */}
-      <div className="mx-auto max-w-xl px-6 py-16">
-        <div className="rounded-2xl bg-white/85 backdrop-blur-sm p-8 shadow-[0_0_1px_rgba(0,0,0,0.06)]">
-          {/* Tiny logo row */}
-          <div className="mb-8 flex items-center gap-2">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-label="NMC logo">
-              <rect x="3" y="3" width="18" height="18" rx="2" stroke="black" />
-              <path d="M7 9h10M7 15h6" stroke="black" strokeWidth="2" />
+      {/* Centered card */}
+      <div className="mx-auto max-w-xl p-6">
+        <div className="rounded-2xl bg-white/85 p-8 shadow-sm ring-1 ring-black/5 backdrop-blur">
+          {/* Logo */}
+          <div className="mb-6 flex items-center gap-2 text-sm font-medium">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="h-5 w-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
-            <span className="text-sm">NMC</span>
+            <span>NMC</span>
           </div>
 
-          {/* Text content */}
-          <h1 className="mb-5 font-semibold">Hi! We're the New Music Co.</h1>
-
-          <section className="space-y-4">
-            <p>
-              We’re a collective of music execs and founders helping labels, managers, agents,
-              distributors, publishers, radio—or anyone in the music industry—turn their next idea
-              into reality.
-            </p>
-            <p>
-              AI lets us ship faster than ever. But knowing what to make—taste, selection,
-              synthesis—matters more. We build the big and the “boring” as much as the small and
-              useful.
-            </p>
-            <p>
-              We help shape your ideas and bring them to life in weeks instead of months. Work with
-              us per project or as an extension of your team, like your own Labs.
-            </p>
-            <p>
-              Sometimes we build things for ourselves—to show, not tell—and along the way, we might
-              find the right partner to take it further. That could be a co-founder, an operator, or
-              a music company ready to run with a working idea.
-            </p>
-          </section>
+          {/* Content */}
+          <h1 className="mb-4 text-lg font-bold">Hi! We're the New Music Co.</h1>
+          <p className="mb-4">
+            We’re a collective of music execs and founders helping labels,
+            managers, agents, distributors, publishers, radio—or anyone in the
+            music industry—turn their next idea into reality.
+          </p>
+          <p className="mb-4">
+            AI lets us ship faster than ever. But knowing what to make—taste,
+            selection, synthesis—matters more. We build the big and the “boring”
+            as much as the small and useful.
+          </p>
+          <p className="mb-4">
+            We help shape your ideas and bring them to life in weeks instead of
+            months. Work with us per project or as an extension of your team,
+            like your own Labs.
+          </p>
+          <p className="mb-6">
+            Sometimes we build things for ourselves—to show, not tell—and along
+            the way, we might find the right partner to take it further. That
+            could be a co-founder, an operator, or a music company ready to run
+            with a working idea.
+          </p>
 
           {/* Button */}
-          <div className="mt-6">
-            <button
-              onClick={() => setShow(v => !v)}
-              className="rounded-md bg-gray-200 px-3 py-2 text-sm hover:bg-gray-300"
-            >
-              Press Play
-            </button>
-          </div>
-
-          {/* Optional reveal (kept for parity with Canvas) */}
-          {show && (
-            <section className="mt-6 space-y-2">
-              <h2 className="font-semibold">How we work</h2>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>MVP in weeks, not months.</li>
-                <li>Labs for hire, or embed with your team.</li>
-                <li>Vibe-arm for bigger companies.</li>
-                <li>Build → spin-out with the right partner.</li>
-              </ul>
-            </section>
-          )}
+          <button className="rounded-md bg-gray-200 px-3 py-1 text-sm shadow-sm hover:bg-gray-300">
+            Press Play
+          </button>
 
           {/* Footer */}
-          <footer className="mt-10">
-            <p className="mb-2">
+          <footer className="mt-8 text-sm leading-6">
+            <p>
               Feel free to reach out at{" "}
-              <a href="mailto:hi@newmusic.co" className="underline" style={{ color: "#1D4ED8" }}>
+              <a
+                href="mailto:hi@newmusic.co"
+                className="text-blue-600 underline"
+              >
                 hi@newmusic.co
               </a>{" "}
               or follow along at{" "}
@@ -81,11 +76,11 @@ export default function NMCGradientPage() {
                 href="https://x.com/newmusicco"
                 target="_blank"
                 rel="noreferrer"
-                className="underline"
-                style={{ color: "#1D4ED8" }}
+                className="text-blue-600 underline"
               >
                 x.com/newmusicco
-              </a>.
+              </a>
+              .
             </p>
           </footer>
         </div>
