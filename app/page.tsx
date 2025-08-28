@@ -1,103 +1,104 @@
-import Image from "next/image";
+'use client'
 
-export default function Home() {
+import { useState } from "react";
+
+export default function TheNewMusicCo() {
+  const [showMission, setShowMission] = useState(false);
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="relative min-h-screen bg-white text-black font-mono text-[17px] md:text-[19px] leading-8">
+      <main className="relative flex items-center justify-center min-h-screen p-6">
+        <div className="w-full max-w-3xl mx-auto text-left pt-12">
+          {/* Logo */}
+          <div className="mb-8">
+            <div className="flex items-center gap-2">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="NMC logo"
+              >
+                <rect x="1" y="1" width="26" height="26" rx="6" stroke="#000" strokeWidth="2" />
+                <path d="M8 9v10M14 9v10M20 9v10" stroke="#000" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+              <span className="text-base">NMC</span>
+            </div>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          {/* Intro Text */}
+          <section className="space-y-6">
+            <p className="font-bold">Hi! We&apos;re the New Music Co.</p>
+            <p>
+              We’re a collective of music execs and founders helping labels, managers, agents,
+              distributors, publishers, radio—or anyone in the music industry—turn their next idea
+              into reality.
+            </p>
+            <p>
+              AI lets us ship faster than ever. But knowing what to make—taste, selection,
+              synthesis—matters more. We build the big and the "boring" as much as the small and
+              useful.
+            </p>
+            <p>
+              We help shape your ideas and bring them to life in matter of weeks instead of months.
+              Work with us per project or as an extension of your team, like your own Labs.
+            </p>
+            <p>
+              Sometimes we build things for ourselves—to show, not tell—and along the way, we might
+              find the right partner to take it further. That could be a co-founder, an operator, or
+              a music company ready to run with a working idea.
+            </p>
+          </section>
+
+          {/* Call to Action */}
+          <div className="mt-8">
+            <button
+              onClick={() => setShowMission(!showMission)}
+              className="inline-block rounded-md bg-gray-200 text-black px-6 py-3 text-base font-medium hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-black/10"
+              aria-label="Press Play to see mission"
+            >
+              Press Play
+            </button>
+          </div>
+
+          {/* How we work Section */}
+          {showMission && (
+            <section className="mt-8 space-y-4">
+              <h2 className="font-semibold">How we work</h2>
+              <ul className="list-disc list-inside space-y-2">
+                <li>MVP in weeks, not months. Fast prototypes you can test right away.</li>
+                <li>Labs for hire. Work with us per project or as an extension of your team.</li>
+                <li>Vibe-arm for big companies. A way to explore without the corporate drag.</li>
+                <li>
+                  Build + spin-out. Sometimes we make things ourselves and find the right partner to
+                  run with it.
+                </li>
+              </ul>
+            </section>
+          )}
+
+          {/* Contact Info */}
+          <footer className="mt-8">
+            <p className="mb-4">
+              Feel free to reach out at{" "}
+              <a href="mailto:hi@newmusic.co" className="underline text-[#1D4ED8]">
+                hi@newmusic.co
+              </a>{" "}
+              or follow along our journey at{" "}
+              <a
+                href="https://x.com/newmusicco"
+                target="_blank"
+                rel="noreferrer"
+                className="underline text-[#1D4ED8]"
+              >
+                x.com/newmusicco
+              </a>
+              .
+            </p>
+          </footer>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
